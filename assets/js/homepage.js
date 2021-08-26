@@ -48,8 +48,10 @@
                     let repoName = repos[i].owner.login + '/' + repos[i].name;
 
                     //create a container for each repo
-                    let repoEl = document.createElement('div');
+                    let repoEl = document.createElement('a');
                     repoEl.classList = 'list-item flex-row justify-space-between align-center';
+                    repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
+
 
                     //create a span element to hold repository name
                     let titleEl = document.createElement('span');
